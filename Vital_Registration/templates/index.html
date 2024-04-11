@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vital Registration System</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% comment %} <link href="{% static 'assets/css/main.css' %}" rel="stylesheet"> {% endcomment %}
+    <!-- Fontawesome Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    {% block stylecss %}
+    {% endblock stylecss %}
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <h2 class="logo"><a href="home">LOGO</a></h2>
+        <input type="checkbox" id="menu-toggler">
+        {% comment %} <label for="menu-toggler" id="hamburger-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </label> {% endcomment %}
+        <ul class="all-links">
+          <li><a href="home">Home</a></li>
+          {% if not request.user.is_authenticated %}
+          <a href="/auth/signup/">Signup </a>
+          <a href="/auth/login">Login </a>
+          {% else %}
+          <li><a href="service">Services</a></li>
+          <li><a href="about">About Us</a></li>
+          <li><a href="contact">Contact Us</a></li>
+          <li><a href="/auth/logout">Log Out</a></li>
+          {% endif %}
+        </ul>
+      </nav>
+    </header>
+
+
+    {%  block body %}
+
+    {% endblock body%}
+
+    <footer>
+      <div>
+        <span> &copy; Copyright <strong><span>Vital Registration</span></strong>. All Rights Reserved</span>
+        <span class="link">
+            Designed by <a href="https:vitalregistration">Vital Register</a>
+        </span>
+      </div>
+    </footer>
+
+  </body>
+</html>
+
+
+

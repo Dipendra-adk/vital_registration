@@ -1,0 +1,49 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block body %}
+<br>
+    <br>
+<section class="services" id="services">
+    
+    <h2>Registration Services</h2>
+    <ul class="cards">
+      <li class="card">
+            <img src=" {% static 'image/home.jpg' %} " alt="img">
+            <a href="birth_registration">
+            <h3>Birth Registration</h3>
+            </a>
+            <p>Register your Child Birth.</p>
+     </li>
+      <li class="card">
+        <img src=" {% static 'image/home.jpg' %} " alt="img">
+        <a href="death_registration">
+        <h3>Death Registration</h3>
+        </a>
+        <p>Register your  loved one's death.</p>
+      </li>
+      <li class="card">
+        <img src=" {% static 'image/home.jpg' %} " alt="img">
+        <a href="marriage_registration">
+        <h3>Marriage Registration</h3>
+        </a>
+        <p>Register  your marriage with us.</p>
+      </li>
+      <li class="card">   
+        <img src=" {% static 'image/home.jpg' %} " alt="img">
+        <a href="migration_registration">
+        <h3>Migration Registration</h3>
+        </a>
+        <p>Register your migrations.</p>
+      </li>
+      <li class="card">  
+        <img src=" {% static 'image/home.jpg' %} " alt="img">
+        <a href="divorce_registration">
+        <h3>Divorce Registration</h3>
+        </a>
+        <p>Register your freedom with us. </p>
+      </li>
+    </ul>
+  </section>
+  <br>
+    <br>
+  {% endblock body %}
